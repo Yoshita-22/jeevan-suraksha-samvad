@@ -22,6 +22,8 @@ import {
 import heroImage from "@/assets/hero-asha-worker.jpg";
 import problemImage from "@/assets/problem-manual.jpg";
 
+import { Link } from "react-router-dom";
+
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -88,10 +90,12 @@ const Index = () => {
             </div>
 
             <div className="hidden md:flex items-center gap-4">
-              <Button variant="hero" size="lg" className="gap-2">
+              <Link to="/chatbot">
+                <Button variant="hero" size="lg" className="gap-2" >
                 <Mic className="w-4 h-4" />
                 Try Demo
               </Button>
+              </Link>
               <Button variant="outline" size="lg">
                 📘 Learn More
               </Button>
@@ -108,10 +112,12 @@ const Index = () => {
 
           {isMenuOpen && (
             <div className="md:hidden mt-4 pb-4 flex flex-col gap-3 animate-fade-in">
-              <Button variant="hero" size="lg" className="gap-2 w-full">
+              <Link to="/chatbot">
+                <Button variant="hero" size="lg" className="gap-2 w-full">
                 <Mic className="w-4 h-4" />
                 Try Demo
               </Button>
+              </Link>
               <Button variant="outline" size="lg" className="w-full">
                 📘 Learn More
               </Button>
@@ -566,10 +572,12 @@ const Index = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <Button variant="hero" size="xl" className="gap-2 shadow-2xl">
-                <Mic className="w-5 h-5" />
-                Try Demo
-              </Button>
+              <Link to="/chatbot">
+                <Button variant="hero" size="xl" className="gap-2 shadow-2xl">
+                  <Mic className="w-5 h-5" />
+                  Try Demo
+                </Button>
+              </Link>
               <Button variant="accent" size="xl" className="gap-2">
                 Partner with Us
                 <ArrowRight className="w-5 h-5" />
@@ -613,6 +621,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      
+
     </div>
   );
 };
