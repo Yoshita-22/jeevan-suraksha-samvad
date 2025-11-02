@@ -46,7 +46,7 @@ const ChatbotUI: React.FC = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/ask", {
+      const res = await fetch("https://jeevan-suraksha-samvad-backend.onrender.com/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: text, lang: selectedLang }),
